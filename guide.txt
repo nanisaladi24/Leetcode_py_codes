@@ -1,0 +1,1 @@
+This repo helps to find python based codes for Leetcode solutions.
