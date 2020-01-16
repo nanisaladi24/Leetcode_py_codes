@@ -1,4 +1,4 @@
-#divide array in "k consecutive number" subsets. Where all numbers in  given array need to consumed.
+#Divide Array in Sets of K Consecutive Numbers
 
 from collections import defaultdict 
 
