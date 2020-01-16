@@ -14,17 +14,18 @@ def isPossibleDivide(nums, k):
     """
     myDict = defaultdict() 
     myArr=[]
+    h=0
     for i in nums:
         try:
             myDict[i]=myDict[i]+1
         except:
             myDict[i]=1
             myArr.append(i)
+            h=h+1
     
     myArr.sort()
     #print myArr
-    h=len(myArr)
-    while myArr!=[]:
+    while True:
         #print myArr
         #printDict(myDict)
         myInd=0
@@ -41,11 +42,15 @@ def isPossibleDivide(nums, k):
             if n-m!=1 or myDict[m]>myDict[n]:
                 return False
             m=n
+            
             if myDict[n]==0:
                 myInd=i
         
         myArr = myArr[myInd+1:]
-        h=h-myInd
+        h=h-myInd-1
+
+        if h==0:
+            return True
         
     return True
         
