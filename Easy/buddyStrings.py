@@ -6,14 +6,12 @@ def buddyStrings(A, B):
     """
     if A==B=="":
         return False
-    flag=0
-    flag2=0
+
     X=list(A)
     Y=list(B)
     
     m=set()
-    
-    #print len(A)
+
     if len(X)==len(Y):
         if A==B:
             for i in X:  
@@ -27,7 +25,7 @@ def buddyStrings(A, B):
             l=list()
             ct=2
             for i in range(len(X)):
-                #print i
+
                 if X[i]==Y[i]:
                     continue
                 elif ct!=0 and X[i]!=Y[i]:
@@ -44,10 +42,10 @@ def buddyStrings(A, B):
                 return False
     
     else:
-        #print "y"
+
         return False
 
-##Example
+##Examples
 
 A="aaaabc"
 B="aaaacb"
